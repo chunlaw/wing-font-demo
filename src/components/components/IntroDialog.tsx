@@ -95,7 +95,7 @@ const IntroDialog = ({ open, onClose }: IntroDialogProps) => {
               fontSize={24}
             >
               暫時最缺係詞典，同埋要知多音字預設點讀最好，可以加入{" "}
-              <a href="https://t.me/windfont" target="_blank">
+              <a href="https://t.me/wingfont" target="_blank">
                 TG 群
               </a>
               傾。
@@ -127,7 +127,7 @@ const IntroDialog = ({ open, onClose }: IntroDialogProps) => {
               fontSize={24}
             >
               依家字體擺位未必好突出，歡迎加入{" "}
-              <a href="https://t.me/windfont" target="_blank">
+              <a href="https://t.me/wingfont" target="_blank">
                 TG 群
               </a>
               詳細分享下應該用咩字體，比例又應該係點。
