@@ -43,27 +43,27 @@ button:focus-visible {
 
 @font-face { 
   font-family: "ChironSungHK-Noto-cangjie-It"; 
-  src: url('https://fonts.chunlaw.io//ChironSungHK-Noto-cangjie-It.woff') format("woff"); 
+  src: url('https://fonts.chunlaw.io/ChironSungHK-Noto-cangjie-It.woff') format("woff"); 
 }
 @font-face { 
   font-family: "ChironSungHK-Noto-cangjie"; 
-  src: url('https://fonts.chunlaw.io//ChironSungHK-Noto-cangjie.woff') format("woff"); 
+  src: url('https://fonts.chunlaw.io/ChironSungHK-Noto-cangjie.woff') format("woff"); 
 }
 @font-face { 
   font-family: "ChironSungHK-Noto-lshk-It"; 
-  src: url('https://fonts.chunlaw.io//ChironSungHK-Noto-lshk-It.woff') format("woff"); 
+  src: url('https://fonts.chunlaw.io/ChironSungHK-Noto-lshk-It.woff') format("woff"); 
 }
 @font-face { 
   font-family: "ChironSungHK-Noto-lshk"; 
-  src: url('https://fonts.chunlaw.io//ChironSungHK-Noto-lshk.woff') format("woff"); 
+  src: url('https://fonts.chunlaw.io/ChironSungHK-Noto-lshk.woff') format("woff"); 
 }
 
 @font-face { 
   font-family: "ChironSungHK-Noto-yale-It"; 
-  src: url('https://fonts.chunlaw.io//ChironSungHK-Noto-yale-It.woff') format("woff"); 
+  src: url('https://fonts.chunlaw.io/ChironSungHK-Noto-yale-It.woff') format("woff"); 
 }
 
 @font-face { 
   font-family: "ChironSungHK-Noto-yale"; 
-  src: url('https://fonts.chunlaw.io//ChironSungHK-Noto-yale.woff') format("woff"); 
+  src: url('https://fonts.chunlaw.io/ChironSungHK-Noto-yale.woff') format("woff"); 
 }

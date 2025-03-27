@@ -53,10 +53,30 @@ const Main = () => {
           <Box key={family} mb={2}>
             <Box display="flex" gap={1}>
               {family}
-              <Button size="small" variant="outlined" endIcon={<Download />}>
-                tff
+              <Button
+                onClick={() =>
+                  window.open(
+                    `https://fonts.chunlaw.io/${family}.ttf`,
+                    "_blank",
+                  )
+                }
+                size="small"
+                variant="outlined"
+                endIcon={<Download />}
+              >
+                ttf
               </Button>
-              <Button size="small" variant="outlined" endIcon={<Download />}>
+              <Button
+                onClick={() =>
+                  window.open(
+                    `https://fonts.chunlaw.io/${family}.woff`,
+                    "_blank",
+                  )
+                }
+                size="small"
+                variant="outlined"
+                endIcon={<Download />}
+              >
                 woff
               </Button>
             </Box>
