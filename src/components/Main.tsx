@@ -61,7 +61,7 @@ const Main = () => {
               </Button>
             </Box>
             <Box>
-              <Typography sx={msgSx} fontFamily="ChironSungHK-Noto-lshk">
+              <Typography sx={msgSx} fontFamily={family}>
                 {msgShown}
               </Typography>
             </Box>
