@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Link, Typography } from "@mui/material";
 import { useState } from "react";
 import IntroDialog from "../components/IntroDialog";
 
@@ -13,7 +13,11 @@ const Header = () => {
       alignItems="center"
       my={1}
     >
-      <Typography variant="h5">Wing Font Generator</Typography>
+      <Link href="/" sx={{ textDecoration: 'none', color: 'black' }}>
+        <Typography variant="h5" letterSpacing={-1}>
+          Wing Font Generator
+        </Typography>
+      </Link>
       <Box display="flex" gap={1}>
         <Button
           onClick={() => setIsDialog(true)}
