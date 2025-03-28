@@ -4,11 +4,15 @@ import AppContext from "../AppContext";
 import { useParams } from "react-router-dom";
 import { useTemplateRotation } from "../utils/hooks";
 import { FontHeader } from "./FontHeader";
+import { AVAILABLE_FONTS } from "../utils/text";
 
 const Specimen = () => {
   const { msg, setMsg } = useContext(AppContext);
   const { family } = useParams<{ family: string }>();
   const msgShown = useTemplateRotation(msg);
+  
+  const fontOption = AVAILABLE_FONTS.find(font => font.name.toLowerCase() === family?.toLowerCase());
+  const displayName = fontOption?.displayName;
 
   return (
     <Box
@@ -19,7 +23,7 @@ const Specimen = () => {
       gap={2}
       py={2}
     >
-      <FontHeader family={family!} />
+      <FontHeader family={displayName!} />
       <TextField
         label="隨便試 (Try it!!)"
         value={msg}
@@ -27,7 +31,7 @@ const Specimen = () => {
         fullWidth
         sx={{ maxWidth: "600px" }}
       />
-      <Box flex={1} display="flex" width="100%">
+      <Box flex={1} display="flex" width="100%" overflow="scroll">
         <Typography sx={msgSx} fontFamily={family}>
           {msgShown}
         </Typography>

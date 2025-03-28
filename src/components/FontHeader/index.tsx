@@ -1,41 +1,49 @@
 import { Box, Button } from "@mui/material";
 import { Download } from "@mui/icons-material";
+import { useState } from 'react';
+import { GenericDialog } from '../GenericDialog';
 
 interface FontHeaderProps {
   family: string;
 }
 
 export const FontHeader = ({ family }: FontHeaderProps) => {
+  const [open, setOpen] = useState(false);
+
+  const handleDownload = (format: 'ttf' | 'woff') => {
+    window.open(`https://fonts.chunlaw.io/${family}.${format}`, "_blank");
+    setOpen(false);
+  };
+
   return (
     <Box
       display="flex"
+      paddingY={2}
       gap={1}
       alignItems="center"
       justifyContent="space-between"
     >
       {family}
-      <Box display="flex" gap={1}>
-        <Button
-          onClick={() =>
-            window.open(`https://fonts.chunlaw.io/${family}.ttf`, "_blank")
-          }
+      <Button
+          onClick={() => setOpen(true)}
           size="small"
-          variant="outlined"
+          variant="contained"
           endIcon={<Download />}
+          sx={{ borderRadius: '9999px' }}
         >
-          ttf
+          免費下載
         </Button>
-        <Button
-          onClick={() =>
-            window.open(`https://fonts.chunlaw.io/${family}.woff`, "_blank")
-          }
-          size="small"
-          variant="outlined"
-          endIcon={<Download />}
-        >
-          woff
-        </Button>
-      </Box>
+
+      <GenericDialog 
+        open={open}
+        onClose={() => setOpen(false)}
+        title="選擇格式"
+      >
+        <Box display="flex" gap={1} pt={1}>
+          <Button onClick={() => handleDownload('ttf')} variant="contained">TTF</Button>
+          <Button onClick={() => handleDownload('woff')} variant="contained">WOFF</Button>
+        </Box>
+      </GenericDialog>
     </Box>
   );
 };

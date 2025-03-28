@@ -26,11 +26,34 @@ export const TEMPLATES: string[] = [
   "望著他雙眼想別人　人留下了留不低那片心",
 ];
 
-export const AVAILABLE_FONTS = [
-  "ChironSungHK-Noto-lshk",
-  "ChironSungHK-Noto-yale",
-  "ChironSungHK-cangjie",
-  "ChironSungHK-Noto-lshk-It",
-  "ChironSungHK-Noto-yale-It",
-  "ChironSungHK-cangjie-It",
+export interface FontOption {
+  name: string;
+  displayName: string;
+}
+
+export const AVAILABLE_FONTS: FontOption[] = [
+  {
+    name: "ChironSungHK-Noto-lshk",
+    displayName: "昭源宋體（粵拼）",
+  },
+  {
+    name: "ChironSungHK-Noto-yale",
+    displayName: "昭源宋體（耶魯拼音）",
+  },
+  {
+    name: "ChironSungHK-cangjie",
+    displayName: "昭源宋體（倉頡）",
+  },
+  {
+    name: "ChironSungHK-Noto-lshk-It",
+    displayName: "昭源宋體（粵拼 斜體）",
+  },
+  {
+    name: "ChironSungHK-Noto-yale-It",
+    displayName: "昭源宋體（耶魯拼音 斜體）",
+  },
+  {
+    name: "ChironSungHK-cangjie-It",
+    displayName: "昭源宋體（倉頡 斜體）",
+  },
 ]; 

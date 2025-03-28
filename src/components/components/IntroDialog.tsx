@@ -23,10 +23,6 @@ const IntroDialog = ({ open, onClose }: IntroDialogProps) => {
         <Divider />
       </DialogTitle>
       <DialogContent>
-        <Typography variant="body1" mb={1}>
-          Wing Font Generator
-          係一套免費開源的工具，方便你我制作不同字體以供開發／教學等不同用途。
-        </Typography>
         <Accordion>
           <AccordionSummary expandIcon={<ExpandMore />}>
             有咩用？
