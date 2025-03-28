@@ -18,7 +18,6 @@ export const FontHeader = ({ family }: FontHeaderProps) => {
   return (
     <Box
       display="flex"
-      paddingY={2}
       gap={1}
       alignItems="center"
       justifyContent="space-between"
@@ -27,9 +26,12 @@ export const FontHeader = ({ family }: FontHeaderProps) => {
       <Button
           onClick={() => setOpen(true)}
           size="small"
-          variant="contained"
+          variant="text"
           endIcon={<Download />}
-          sx={{ borderRadius: '9999px' }}
+          sx={{ 
+            borderRadius: '9999px',
+            color: 'secondary.main',
+          }}
         >
           免費下載
         </Button>
