@@ -13,7 +13,7 @@ const Header = () => {
       alignItems="center"
       my={1}
     >
-      <Link href="/" sx={{ textDecoration: 'none', color: 'black' }}>
+      <Link href="/" sx={{ textDecoration: "none", color: "black" }}>
         <Typography variant="h5" letterSpacing={-1}>
           Wing Font Generator
         </Typography>

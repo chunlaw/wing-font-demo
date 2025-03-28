@@ -27,11 +27,7 @@ const Specimen = () => {
         fullWidth
         sx={{ maxWidth: "600px" }}
       />
-      <Box
-        flex={1}
-        display="flex"
-        width="100%"
-      >
+      <Box flex={1} display="flex" width="100%">
         <Typography sx={msgSx} fontFamily={family}>
           {msgShown}
         </Typography>
@@ -45,4 +41,4 @@ export default Specimen;
 const msgSx: SxProps<Theme> = {
   fontSize: 72,
   textWrap: "wrap",
-}; 
+};

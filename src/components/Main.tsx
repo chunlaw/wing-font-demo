@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Divider,
   SxProps,
   TextField,
@@ -9,7 +8,6 @@ import {
 } from "@mui/material";
 import { useContext } from "react";
 import AppContext from "../AppContext";
-import { Download } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import { AVAILABLE_FONTS } from "../utils/text";
 import { useTemplateRotation } from "../utils/hooks";

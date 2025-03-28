@@ -42,12 +42,12 @@ button:focus-visible {
 }
 
 @font-face { 
-  font-family: "ChironSungHK-Noto-cangjie-It"; 
-  src: url('https://fonts.chunlaw.io/ChironSungHK-Noto-cangjie-It.woff') format("woff"); 
+  font-family: "ChironSungHK-cangjie-It"; 
+  src: url('https://fonts.chunlaw.io/ChironSungHK-cangjie-It.woff') format("woff"); 
 }
 @font-face { 
-  font-family: "ChironSungHK-Noto-cangjie"; 
-  src: url('https://fonts.chunlaw.io/ChironSungHK-Noto-cangjie.woff') format("woff"); 
+  font-family: "ChironSungHK-cangjie"; 
+  src: url('https://fonts.chunlaw.io/ChironSungHK-cangjie.woff') format("woff"); 
 }
 @font-face { 
   font-family: "ChironSungHK-Noto-lshk-It"; 

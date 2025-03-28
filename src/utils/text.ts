@@ -29,8 +29,8 @@ export const TEMPLATES: string[] = [
 export const AVAILABLE_FONTS = [
   "ChironSungHK-Noto-lshk",
   "ChironSungHK-Noto-yale",
-  "ChironSungHK-Noto-cangjie",
+  "ChironSungHK-cangjie",
   "ChironSungHK-Noto-lshk-It",
   "ChironSungHK-Noto-yale-It",
-  "ChironSungHK-Noto-cangjie-It",
+  "ChironSungHK-cangjie-It",
 ]; 
