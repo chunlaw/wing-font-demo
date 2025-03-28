@@ -1,7 +1,6 @@
-import { Box, Button } from "@mui/material";
+import { Box, Button, Menu, MenuItem } from "@mui/material";
 import { Download } from "@mui/icons-material";
-import { useState } from 'react';
-import { GenericDialog } from '../GenericDialog';
+import { useRef, useState } from "react";
 
 interface FontHeaderProps {
   family: string;
@@ -9,8 +8,9 @@ interface FontHeaderProps {
 
 export const FontHeader = ({ family }: FontHeaderProps) => {
   const [open, setOpen] = useState(false);
+  const btnRef = useRef<HTMLButtonElement>(null);
 
-  const handleDownload = (format: 'ttf' | 'woff') => {
+  const handleDownload = (format: "ttf" | "woff") => {
     window.open(`https://fonts.chunlaw.io/${family}.${format}`, "_blank");
     setOpen(false);
   };
@@ -24,28 +24,27 @@ export const FontHeader = ({ family }: FontHeaderProps) => {
     >
       {family}
       <Button
-          onClick={() => setOpen(true)}
-          size="small"
-          variant="text"
-          endIcon={<Download />}
-          sx={{ 
-            borderRadius: '9999px',
-            color: 'secondary.main',
-          }}
-        >
-          免費下載
-        </Button>
+        ref={btnRef}
+        onClick={() => setOpen(true)}
+        size="small"
+        variant="text"
+        endIcon={<Download />}
+        sx={{
+          borderRadius: "9999px",
+          color: "secondary.main",
+        }}
+      >
+        免費下載
+      </Button>
 
-      <GenericDialog 
+      <Menu
         open={open}
         onClose={() => setOpen(false)}
-        title="選擇格式"
+        anchorEl={btnRef.current}
       >
-        <Box display="flex" gap={1} pt={1}>
-          <Button onClick={() => handleDownload('ttf')} variant="contained">TTF</Button>
-          <Button onClick={() => handleDownload('woff')} variant="contained">WOFF</Button>
-        </Box>
-      </GenericDialog>
+        <MenuItem onClick={() => handleDownload("ttf")}>.ttf</MenuItem>
+        <MenuItem onClick={() => handleDownload("woff")}>.woff</MenuItem>
+      </Menu>
     </Box>
   );
 };

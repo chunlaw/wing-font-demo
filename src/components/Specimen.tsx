@@ -10,8 +10,10 @@ const Specimen = () => {
   const { msg, setMsg } = useContext(AppContext);
   const { family } = useParams<{ family: string }>();
   const msgShown = useTemplateRotation(msg);
-  
-  const fontOption = AVAILABLE_FONTS.find(font => font.name.toLowerCase() === family?.toLowerCase());
+
+  const fontOption = AVAILABLE_FONTS.find(
+    (font) => font.name.toLowerCase() === family?.toLowerCase(),
+  );
   const displayName = fontOption?.displayName;
 
   return (

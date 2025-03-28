@@ -33,7 +33,12 @@ const Main = () => {
       overflow="scroll"
     >
       <div
-        style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "left" }}
+        style={{
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "left",
+        }}
       >
         <Typography variant="body1" mb={1}>
           Wing Font
