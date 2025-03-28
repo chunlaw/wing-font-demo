@@ -32,23 +32,25 @@ const Main = () => {
       my={1}
       overflow="scroll"
     >
-      
-      <div style={{ display: "flex", flexDirection: "column", alignItems: "left" }}>
-      <Typography variant="body1" mb={1}>
-        Wing Font 係一套免費開源的工具，方便大家製作不同字體以供開發／教學等用途。
-      </Typography>
-      <Button
-        variant="contained"
-        color="primary"
-        onClick={() => setIsDialog(true)}
-        sx={{
-          alignSelf: 'flex-start',
-          mb: 2,
-          borderRadius: '9999px',
-        }}
+      <div
+        style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "left" }}
       >
-        看介紹！
-      </Button>
+        <Typography variant="body1" mb={1}>
+          Wing Font
+          係一套免費開源的工具，方便大家製作不同字體以供開發／教學等用途。
+        </Typography>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => setIsDialog(true)}
+          sx={{
+            alignSelf: "flex-start",
+            mb: 2,
+            borderRadius: "9999px",
+          }}
+        >
+          了解更多！
+        </Button>
       </div>
       <TextField
         label="隨便試 (Try it!!)"
