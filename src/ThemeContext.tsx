@@ -68,6 +68,18 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
             },
           }),
     },
+    components: {
+      MuiTextField: {
+        defaultProps: {
+          size: "small",
+        }
+      },
+      MuiButton: {
+        defaultProps: {
+          size: "small",
+        }
+      }
+    },
   });
 
   return (

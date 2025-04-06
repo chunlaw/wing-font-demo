@@ -1,21 +1,31 @@
 import { Box, TextField, Typography, SxProps, Theme } from "@mui/material";
-import { useContext } from "react";
+import { useContext, useEffect, useMemo } from "react";
 import AppContext from "../AppContext";
 import { useParams } from "react-router-dom";
 import { useTemplateRotation } from "../utils/hooks";
-import { FontHeader } from "./FontHeader";
-import { AVAILABLE_FONTS } from "../utils/text";
+import { AVAILABLE_FONTS } from "../utils/const";
+import { FontHeader } from "../components/components/FonttHeader";
 
 const Specimen = () => {
-  const { msg, setMsg } = useContext(AppContext);
+  const { msg, setMsg, loadFont } = useContext(AppContext);
   const { family } = useParams<{ family: string }>();
   const msgShown = useTemplateRotation(msg);
 
-  const fontOption = AVAILABLE_FONTS.find(
-    (font) => font.name.toLowerCase() === family?.toLowerCase(),
-  );
-  const displayName = fontOption?.displayName;
+  const fontOption = useMemo(() => {
+    for ( const lang in AVAILABLE_FONTS ) {
+      for ( const _family in AVAILABLE_FONTS[lang] ) {
+        if ( _family === family ) {
+          return AVAILABLE_FONTS[lang].fonts[_family]
+        }
+      }
+    }
+    return Object.values(Object.values(AVAILABLE_FONTS)[0].fonts)[0]
+  }, [])
 
+  useEffect(() => {
+    loadFont(fontOption)
+  }, [loadFont])
+  
   return (
     <Box
       display="flex"
@@ -25,13 +35,12 @@ const Specimen = () => {
       gap={2}
       py={2}
     >
-      <FontHeader family={displayName!} />
+      <FontHeader family={fontOption.name} displayName={fontOption.displayName} />
       <TextField
         label="隨便試 (Try it!!)"
         value={msg}
         onChange={({ target: { value } }) => setMsg(value)}
         fullWidth
-        sx={{ maxWidth: "600px" }}
       />
       <Box flex={1} display="flex" width="100%" overflow="scroll">
         <Typography sx={msgSx} fontFamily={family}>

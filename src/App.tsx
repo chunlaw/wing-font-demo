@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/layouts/Layout";
-import Main from "./components/Main";
-import Specimen from "./components/Specimen";
+import Main from "./pages/Main";
+import Specimen from "./pages/Specimen";
 
 function App() {
   return (

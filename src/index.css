@@ -40,30 +40,3 @@ button:focus-visible {
 * {
   user-select: none;
 }
-
-@font-face { 
-  font-family: "ChironSungHK-cangjie-It"; 
-  src: url('https://fonts.chunlaw.io/ChironSungHK-cangjie-It.woff') format("woff"); 
-}
-@font-face { 
-  font-family: "ChironSungHK-cangjie"; 
-  src: url('https://fonts.chunlaw.io/ChironSungHK-cangjie.woff') format("woff"); 
-}
-@font-face { 
-  font-family: "ChironSungHK-Noto-lshk-It"; 
-  src: url('https://fonts.chunlaw.io/ChironSungHK-Noto-lshk-It.woff') format("woff"); 
-}
-@font-face { 
-  font-family: "ChironSungHK-Noto-lshk"; 
-  src: url('https://fonts.chunlaw.io/ChironSungHK-Noto-lshk.woff') format("woff"); 
-}
-
-@font-face { 
-  font-family: "ChironSungHK-Noto-yale-It"; 
-  src: url('https://fonts.chunlaw.io/ChironSungHK-Noto-yale-It.woff') format("woff"); 
-}
-
-@font-face { 
-  font-family: "ChironSungHK-Noto-yale"; 
-  src: url('https://fonts.chunlaw.io/ChironSungHK-Noto-yale.woff') format("woff"); 
-}

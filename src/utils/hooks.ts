@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { TEMPLATES } from "./text";
+import { TEMPLATES } from "./const";
 
 export const useTemplateRotation = (msg: string | null) => {
   const [templateIdx, setTemplateIdx] = useState<number>(
@@ -20,4 +20,4 @@ export const useTemplateRotation = (msg: string | null) => {
   }, []);
 
   return msgShown;
-}; 
+};
